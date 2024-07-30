@@ -32,7 +32,7 @@ To ensure accuracy, please install so that the top surface of the sensor coil pl
 Clone ```IDM``` from git and run the install script:
 ```
 cd ~
-git clone https://github.com/ModularPrintingSystem/IDM.git
+git clone https://github.com/Killajoedotcom/IDM.git
 ./IDM/install.sh
 ```
 
@@ -188,6 +188,14 @@ PROBE_ACCURACY
 You can measure the backlash of your Z axis:
 ```
 IDM_ESTIMATE_BACKLASH
+```
+
+Update this section with your new estimated backlash compensation. It is a good idea to do this compensation test at all 4x corners of your build plate and then again at middle of build plate. If you are on a printer with belted Z and the values in each corner deviate heavily. This would indicate a loose belt on that corner. 
+
+
+QGL the printer before your continue to your bed mesh
+```
+G32
 ```
 
 ## 6. Calibrate Bed Mesh
